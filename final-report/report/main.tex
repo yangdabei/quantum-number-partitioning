@@ -1,0 +1,89 @@
+%\documentclass[11pt,draft]{article}
+\documentclass[aps,twocolumn,preprintnumbers]{revtex4}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{natbib}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{lipsum}
+\usepackage[legalpaper, portrait, left=20mm, right=20mm, bottom=20mm, top=20mm]{geometry}
+%\usepackage[parfill]{parskip}
+\usepackage[autostyle]{csquotes}
+\usepackage[shortlabels]{enumitem}
+\usepackage{verbatim}
+\usepackage{subfiles}
+%\usepackage{breqn}
+\usepackage{graphicx}
+\usepackage{bm}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    citecolor=blue
+    }
+
+\urlstyle{same}
+\usepackage{appendix}
+\usepackage{xcolor}
+\usepackage{float}
+%\usepackage[format=plain,
+%            labelfont={bf,it},
+%            textfont=it]{caption}
+\usepackage{tikz}
+
+\usepackage[labelfont={bf},textfont=it]{caption}
+\usepackage{subcaption}
+
+
+\newcommand{\lr}[3]{\!\left#1 #3 \right#2}
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+\title{Quantum Number Partitioning}
+\author{Yangda Bei u7281660 \\ 3$^\text{rd}$ Year Mathematics \\ Advanced Studies Course SCNC3101}
+\affiliation{ANU Research School of Physics,
+            The Australian National University \\
+            ANU Mathematical Sciences Institute, The Australian National University}
+
+
+
+
+    \begin{abstract}
+    \centering
+
+        The number partition problem (NPP) is an NP-hard optimisation problem. We show how to formulate the NPP as a maximum cut (max-cut) problem of a complete, weighted graph, allowing us to apply the Quantum Approximation Optimisation Algorithm (QAOA) and its variants, multi-angle QAOA (MAQAOA) and eXpressive QAOA (XQAOA), to find optimal solutions. To benchmark the performances of the ansatzes on NPP's, we derive closed-form expressions at depth $p=1$ for NPP formulated as max-cut and compare it to the Goemans-Williamson algorithm for max-cut as well as classical NPP heuristics. Our results show that although XQAOA performs better than the Goemans-Williamson algorithm, QAOA, and MAQAOA on complete, weighted graphs, classical NPP heuristics are more effective for solving NPP's for small, problem sizes.
+    \end{abstract}
+
+\maketitle 
+
+
+    \subfile{sections/introduction}
+
+    \subfile{sections/preliminaries}
+    
+    \subfile{sections/problems}
+    \subfile{sections/qaoa}
+
+    \subfile{sections/simulations}
+
+    \subfile{sections/discussion}
+
+    \subfile{sections/futuredirections}
+
+    
+
+    \section*{Acknowledgements}
+
+    I would like to thank Syed Assad for supervising this project, as well as Aritra Das and V Vijendran for their support. I would also like to thank Jeffrey Liang for his continual positivity and resilience, which allowed us to complete the project in high spirits.
+
+    \bibliographystyle{unsrtnat}
+    \bibliography{bibliography}
+
+
+
+\end{document}

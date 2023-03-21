@@ -1,0 +1,170 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Preskill(2018)]{Preskill2018quantumcomputingin}
+John Preskill.
+\newblock Quantum {C}omputing in the {NISQ} era and beyond.
+\newblock \emph{{Quantum}}, 2:\penalty0 79, August 2018.
+\newblock ISSN 2521-327X.
+\newblock \doi{10.22331/q-2018-08-06-79}.
+\newblock URL \url{https://doi.org/10.22331/q-2018-08-06-79}.
+
+\bibitem[Boixo et~al.(2018)Boixo, Isakov, Smelyanskiy, Babbush, Ding, Jiang,
+  Bremner, Martinis, and Neven]{boixo2018characterizing}
+Sergio Boixo, Sergei~V Isakov, Vadim~N Smelyanskiy, Ryan Babbush, Nan Ding,
+  Zhang Jiang, Michael~J Bremner, John~M Martinis, and Hartmut Neven.
+\newblock Characterizing quantum supremacy in near-term devices.
+\newblock \emph{Nature Physics}, 14\penalty0 (6):\penalty0 595--600, 2018.
+
+\bibitem[Cerezo et~al.(2021{\natexlab{a}})Cerezo, Arrasmith, Babbush, Benjamin,
+  Endo, Fujii, McClean, Mitarai, Yuan, Cincio, et~al.]{cerezo2021variational}
+Marco Cerezo, Andrew Arrasmith, Ryan Babbush, Simon~C Benjamin, Suguru Endo,
+  Keisuke Fujii, Jarrod~R McClean, Kosuke Mitarai, Xiao Yuan, Lukasz Cincio,
+  et~al.
+\newblock Variational quantum algorithms.
+\newblock \emph{Nature Reviews Physics}, 3\penalty0 (9):\penalty0 625--644,
+  2021{\natexlab{a}}.
+
+\bibitem[Farhi et~al.(2014)Farhi, Goldstone, and Gutmann]{farhi2014quantum}
+Edward Farhi, Jeffrey Goldstone, and Sam Gutmann.
+\newblock A quantum approximate optimization algorithm.
+\newblock \emph{arXiv preprint arXiv:1411.4028}, 2014.
+
+\bibitem[Streif et~al.(2021)Streif, Yarkoni, Skolik, Neukart, and
+  Leib]{streif2021beating}
+Michael Streif, Sheir Yarkoni, Andrea Skolik, Florian Neukart, and Martin Leib.
+\newblock Beating classical heuristics for the binary paint shop problem with
+  the quantum approximate optimization algorithm.
+\newblock \emph{Physical Review A}, 104\penalty0 (1):\penalty0 012403, 2021.
+
+\bibitem[Vikst{\aa}l et~al.(2020)Vikst{\aa}l, Gr{\"o}nkvist, Svensson,
+  Andersson, Johansson, and Ferrini]{vikstaal2020applying}
+Pontus Vikst{\aa}l, Mattias Gr{\"o}nkvist, Marika Svensson, Martin Andersson,
+  G{\"o}ran Johansson, and Giulia Ferrini.
+\newblock Applying the quantum approximate optimization algorithm to the
+  tail-assignment problem.
+\newblock \emph{Physical Review Applied}, 14\penalty0 (3):\penalty0 034009,
+  2020.
+
+\bibitem[Sarkar(1987)]{sarkar1987partitioning}
+Vivek Sarkar.
+\newblock \emph{Partitioning and scheduling parallel programs for execution on
+  multiprocessors}.
+\newblock Stanford University, 1987.
+
+\bibitem[Walsh(2009)]{walsh2009really}
+Toby Walsh.
+\newblock Where are the really hard manipulation problems? the phase transition
+  in manipulating the veto rule.
+\newblock \emph{arXiv preprint arXiv:0905.3720}, 2009.
+
+\bibitem[Merkle and Hellman(1978)]{merkle1978hiding}
+Ralph Merkle and Martin Hellman.
+\newblock Hiding information and signatures in trapdoor knapsacks.
+\newblock \emph{IEEE transactions on Information Theory}, 24\penalty0
+  (5):\penalty0 525--530, 1978.
+
+\bibitem[Herrman et~al.(2022)Herrman, Lotshaw, Ostrowski, Humble, and
+  Siopsis]{herrman2022multi}
+Rebekah Herrman, Phillip~C Lotshaw, James Ostrowski, Travis~S Humble, and
+  George Siopsis.
+\newblock Multi-angle quantum approximate optimization algorithm.
+\newblock \emph{Scientific Reports}, 12\penalty0 (1):\penalty0 6781, 2022.
+
+\bibitem[Vijendran et~al.(2023)Vijendran, Das, Koh, Assad, and
+  Lam]{vijendran2023expressive}
+V~Vijendran, Aritra Das, Dax~Enshan Koh, Syed~M Assad, and Ping~Koy Lam.
+\newblock An expressive ansatz for low-depth quantum optimisation.
+\newblock \emph{arXiv preprint arXiv:2302.04479}, 2023.
+
+\bibitem[Schumacher(1995)]{schumacher1995quantum}
+Benjamin Schumacher.
+\newblock Quantum coding.
+\newblock \emph{Physical Review A}, 51\penalty0 (4):\penalty0 2738, 1995.
+
+\bibitem[Barahona(1982)]{barahona1982computational}
+Francisco Barahona.
+\newblock On the computational complexity of ising spin glass models.
+\newblock \emph{Journal of Physics A: Mathematical and General}, 15\penalty0
+  (10):\penalty0 3241, 1982.
+
+\bibitem[Lucas(2014)]{lucas2014ising}
+Andrew Lucas.
+\newblock Ising formulations of many np problems.
+\newblock \emph{Frontiers in physics}, 2:\penalty0 5, 2014.
+
+\bibitem[Kirkpatrick et~al.(1983)Kirkpatrick, Gelatt~Jr, and
+  Vecchi]{kirkpatrick1983optimization}
+Scott Kirkpatrick, C~Daniel Gelatt~Jr, and Mario~P Vecchi.
+\newblock Optimization by simulated annealing.
+\newblock \emph{science}, 220\penalty0 (4598):\penalty0 671--680, 1983.
+
+\bibitem[Karp(2010)]{karp2010reducibility}
+Richard~M Karp.
+\newblock \emph{Reducibility among combinatorial problems}.
+\newblock Springer, 2010.
+
+\bibitem[Korf(2009)]{korf2009multi}
+Richard~Earl Korf.
+\newblock Multi-way number partitioning.
+\newblock In \emph{Twenty-First International Joint Conference on Artificial
+  Intelligence}, 2009.
+
+\bibitem[Hayes(2002)]{hayes2002computing}
+Brian Hayes.
+\newblock Computing science: The easiest hard problem.
+\newblock \emph{American Scientist}, 90\penalty0 (2):\penalty0 113--117, 2002.
+
+\bibitem[Goemans and Williamson(1994)]{goemans1994879}
+Michel~X Goemans and David~P Williamson.
+\newblock . 879-approximation algorithms for max cut and max 2sat.
+\newblock In \emph{Proceedings of the twenty-sixth annual ACM symposium on
+  Theory of computing}, pages 422--431, 1994.
+
+\bibitem[{Gurobi Optimization, LLC}(2023)]{gurobi}
+{Gurobi Optimization, LLC}.
+\newblock {Gurobi Optimizer Reference Manual}, 2023.
+\newblock URL \url{https://www.gurobi.com}.
+
+\bibitem[McClean et~al.(2018)McClean, Boixo, Smelyanskiy, Babbush, and
+  Neven]{mcclean2018barren}
+Jarrod~R McClean, Sergio Boixo, Vadim~N Smelyanskiy, Ryan Babbush, and Hartmut
+  Neven.
+\newblock Barren plateaus in quantum neural network training landscapes.
+\newblock \emph{Nature communications}, 9\penalty0 (1):\penalty0 4812, 2018.
+
+\bibitem[Mertens(1998)]{mertens1998phase}
+Stephan Mertens.
+\newblock Phase transition in the number partitioning problem.
+\newblock \emph{Physical Review Letters}, 81\penalty0 (20):\penalty0 4281,
+  1998.
+
+\bibitem[Cerezo et~al.(2021{\natexlab{b}})Cerezo, Sone, Volkoff, Cincio, and
+  Coles]{cerezo2021cost}
+Marco Cerezo, Akira Sone, Tyler Volkoff, Lukasz Cincio, and Patrick~J Coles.
+\newblock Cost function dependent barren plateaus in shallow parametrized
+  quantum circuits.
+\newblock \emph{Nature communications}, 12\penalty0 (1):\penalty0 1791,
+  2021{\natexlab{b}}.
+
+\bibitem[Bengtsson et~al.(2019)Bengtsson, Vikst{\aa}l, Warren, Svensson, Gu,
+  Kockum, Krantz, Krizan, Shiri, Svensson, et~al.]{bengtsson2019quantum}
+Andreas Bengtsson, Pontus Vikst{\aa}l, Christopher Warren, Marika Svensson, Xiu
+  Gu, Anton~Frisk Kockum, Philip Krantz, Christian Krizan, Daryoush Shiri,
+  Ida-Maria Svensson, et~al.
+\newblock Quantum approximate optimization of the exact-cover problem on a
+  superconducting quantum processor.
+\newblock \emph{arXiv preprint arXiv:1912.10495}, 2019.
+
+\bibitem[Zhou et~al.(2020)Zhou, Wang, Choi, Pichler, and
+  Lukin]{zhou2020quantum}
+Leo Zhou, Sheng-Tao Wang, Soonwon Choi, Hannes Pichler, and Mikhail~D Lukin.
+\newblock Quantum approximate optimization algorithm: Performance, mechanism,
+  and implementation on near-term devices.
+\newblock \emph{Physical Review X}, 10\penalty0 (2):\penalty0 021067, 2020.
+
+\end{thebibliography}

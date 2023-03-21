@@ -1,0 +1,12 @@
+\section{Introduction}
+
+With the current state quantum computing hardware, known as Noisy Intermediate-Scale Quantum (NISQ) devices \cite{Preskill2018quantumcomputingin}, we are still quite far off from achieving general \emph{quantum supremacy} \cite{boixo2018characterizing}. However, one particularly promising method to obtain quantum advantage on NISQ devices is the use of variational quantum algorithms (VQA's) \cite{cerezo2021variational}. Unlike traditional quantum algorithms, VQA's are a class of hybrid quantum-classical algorithms that seek to optimise an objective function by iteratively adjusting a set of quantum parameters in a quantum circuit, much like a classical neural network.
+
+One of the most prominent VQA's is the Quantum Approximate Optimization Algorithm (QAOA), which has shown promise in solving combinatorial optimization problems \cite{farhi2014quantum}. QAOA has been studied extensively on the \emph{maximum cut problem} but has also been applied to practical applications such as the \emph{binary paint shop problem} \cite{streif2021beating} and the \emph{tail-assignment problem} \cite{vikstaal2020applying}.
+
+In this study, we look at the \emph{number partitioning problem}, which has applications in multiprocessor scheduling \cite{sarkar1987partitioning}, voter manipulation \cite{walsh2009really}, and public key encryption schemes \cite{merkle1978hiding}. We present our findings on the effectiveness of quantum combinatorial optimisation methods on the number partitioning problem, which to our knowledge has not been done before. In particular, we evaluate the application of QAOA and its variants, multi-angle QAOA (MAQAOA) \cite{herrman2022multi} and eXpressive QAOA (XQAOA) \cite{vijendran2023expressive}, by reformulating number partitioning problems as instances of weighted maximum cut problems. 
+
+In Section \ref{sec:prelim}, we review some quantum computing foundations. In Section \ref{sec:problem}, we give an overview of the maximum cut problem and the number partitioning problem, and discuss the mapping of the problems to their respective Ising Hamiltonians. In Section \ref{sec:qaoa}, we review the Quantum Approximation Optimisation Algorithm (QAOA) and its variants. In Section \ref{sec:sim}, we show our results of maximum cut formulations of number partitioning problems and provide a discussion on our findings in Section \ref{sec:disc}. We conclude with future directions in Section \ref{sec:fd}.
+
+The repository for this project can be found here {\color{red} insert url}
+

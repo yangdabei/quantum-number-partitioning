@@ -1,0 +1,58 @@
+\section{Preliminaries} \label{sec:prelim}
+
+\subsection{Computational Complexity}
+
+    To begin, we first define the type of problems that were analysed by giving an overview of computational complexity. A \emph{decision problem} is a problem whose inputs can be posed with a yes or no solution. A \emph{complexity class} is a set of computational problems which uses similar computational resources that are needed to solve them. They provide a way of categorising the difficulty of various problems. We list out a few common complexity classes and their definitions:
+    \begin{itemize}
+        \item \textbf{P}: This class contains problems that can be solved in polynomial time with a deterministic algorithm. Equivalently, the running time of the algorithm is bounded by a polynomial function of the input size.
+        \item \textbf{NP}: This class contains problems for which solutions can be verified in polynomial time using a non-deterministic algorithm. Equivalently, given a potential solution, it is possible to check whether it is correct or not in polynomial time.
+        \item \textbf{NP-Hard}: This class contains problems that are at least as hard as the hardest problems in NP. Equivalently, if there exists a mapping from a problem $p$ in NP to a problem $b$ in NP-hard in polynomial time, then $a$ is also NP-hard.
+        \item \textbf{NP-Complete}: This class contains problems that are both NP and NP-hard. Equivalently, a problem $p$ is NP-complete if it is in NP and if every problem in NP can be reduced to $p$ in polynomial time.
+        
+    \end{itemize}
+
+    Although a candidate solution to an NP-complete problem can be verified in polynomial time, a solution cannot be found in polynomial time with a deterministic algorithm. That is, the most comprehensive method to obtain all solution using any currently known algorithm is by performing a brute force search which increases as the size of the problem grows. The P versus NP problem wishes to determine if these problems can be solved quickly. Whilst methods to compute solutions to NP-complete problems in polynomial time are yet to be discovered, heuristic methods and approximation algorithms are typically used to find optimal solutions.
+
+
+
+%    Why is it possible to approximate the solution of one NP-complete problem, but %not another? After all, isn’t it possible to efficiently transform from one %problem to another? This is certainly true, however it is not necessarily true %that this transformation preserves the notion of a ‘good approximation’ to a %solution. As a result, the computational complexity theory of approximation %algorithms for problems in NP has a structure that goes beyond the structure of %NP proper. An entire complexity theory of approximation algorithms exists, %which unfortunately is beyond the scope of this book. The basic idea, however, %is to define a notion of reduction that corresponds to being able to %efficiently reduce one approximation problem to another, in such a way that the %notion of good approximation is preserved. With such a notion, it is possible %to define complexity classes such as MAXSNP by analogy to the class NP, as the %set of problems for which it is possible to efficiently verify approximate %solutions to the problem. Complete problems exist for MAXSNP, just as for NP, %and it is an interesting open problem to determine how the class MAXSNP %compares to the class of approximation problems which are efficiently solvable.
+%We conclude our discussion with a complexity class that results when the underlying %model of computation itself is changed. Suppose a Turing machine is endowed with %the ability to flip coins, using the results of the coin tosses to decide what %actions to take during the computation. Such a Turing machine may only accept or %reject inputs with a certain probability. The complexity class BPP (for %bounded-error probabilistic time) contains all languages L with the property that %there exists a probabilistic Turing machine M such that if x ∈ L then M accepts x %with probability at least 3/4, and if x ̸∈ L, then M rejects x with probability at %least 3/4. The following exercise shows that the choice of the constant 3/4 is %essentially arbitrary:
+%
+%Indeed, the Chernoff bound, discussed in Box 3.4, implies that with just a few %repetitions of an algorithm deciding a language in BPP the probability of success %can be amplified to the point where it is essentially equal to one, for all intents %and purposes. For this reason, BPP even more than P is the class of decision %problems which is usually regarded as being efficiently solvable on a classical %computer, and it is the quantum analogue of BPP, known as BQP, that is most %interesting in our study of quantum algorithms.
+    %In this report, we focus on analysing NP-hard problems.
+
+\subsection{Quantum Computing}
+
+    Whilst classical information is encoded in bits, we express quantum information in quantum bits, often referred to as qubits \cite{schumacher1995quantum}. A single qubit can be thought of as a two-state system, such as a spin-half or a two-level atom. We represent the quantum state of a qubit by the vectors 
+    $$|0\rangle=\begin{pmatrix}1\\0\end{pmatrix} \quad \text{ and } \quad |1\rangle = \begin{pmatrix}0\\1\end{pmatrix},$$
+    which we call its computational basis. More generally, a quantum system has $n$ qubits if it can be represented as a superposition of orthonormal basis elements within a Hilbert space of dimension $2^n$. The $2^n$ orthonormal basis elements is typically represented by $\{|\mathbf{x}\rangle\}$, where $\mathbf{x}$ is a bitstring of length $n$. For multi-state quantum systems, a bitstring of length $n$ corresponds to the Kronecker product of the vectors represented by each bit, that is, we represent a general quantum state as
+    \begin{align}
+        |\psi\rangle &= \sum^{2^n}_{k=1}a_k|x_1\rangle \otimes\dots\otimes|x_n\rangle \nonumber \\
+        &= \sum^{2^n}_{k=1}a_k|x_1\dots x_n\rangle,
+    \end{align}
+    where $x_i\in \{0,1\}$ and $a_k\in \mathbb{C}$. According to the Born rule, $|a_k|^2$ is the probability of configuration $k$ being measured and $\sum^{2^n}_{k=1}|a_k|^2=1$. To preserve this norm, operators acting on single qubits must be $2\times2$ unitary matrices. Of these, the most common are the Pauli operators given by 
+    \begin{equation}\sigma^x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \, \, \, \, \sigma^y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \text{ and} \, \, \, \, \sigma^z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}.\end{equation}
+
+\subsection{Ising Models}
+
+    The Ising model is a mathematical model that describes phase transitions. The atoms in a crystal are represented by vertices and bonds between adjacent atoms are represented by edges. The mapping is such that a solution to the problem corresponds to a spin configuration that minimizes the energy of the Ising spin glass model. Classically, an Ising model can be represented as a quadratic function of a set of $n$ spin states $s_i=\pm1$ given by the Hamiltonian 
+    \begin{equation} \label{eq:ising}
+        H(s_1,\dots,s_n) = -\sum_{i<j}J_{ij}s_is_j-\sum^n_{i=1}h_is_i,
+    \end{equation}
+    where $J$ is a real, symmetric matrix with zero diagonal often referred to as the coupling matrix, and $h$ is a vector of real coefficients often referred to as the local magnetic field. The quantum version of the Ising model simply maps each spin variable $s_i$ to the Pauli-$Z$ matrix $\sigma_i^z$ which acts on the $i$-th qubit in a Hilbert space of $n$ qubits. Equation \ref{eq:ising} can then be expressed as an operator given by $H\in \mathbb{R}^{2^n}\times \mathbb{R}^{2^n}$, where
+    \begin{equation} \label{eq:ising_quantum}
+        H(\sigma^z_1,\dots,\sigma^z_n) = -\sum_{i<j}J_{ij}\sigma^z_i\sigma^z_j-\sum^n_{i=1}h_i\sigma^z_i.
+    \end{equation}
+    Since the decision form of the Ising model determining whether $H_0\leq 0$ is NP-complete \cite{barahona1982computational} (where $H_0$ is the ground state of the Hamiltonian), we can map any NP-complete problem in polynomial time to solving for the ground state of an Ising spin model \cite{lucas2014ising}. We will use the quantum Ising formulation approach \cite{kirkpatrick1983optimization} to find the ground states of combinatorial optimisation problems that we introduce next.
+
+    %It is sometimes preferable to express the Hamiltonian in the form of a matrix. An alternate formulation of the Ising glass model is to represent the problem as a quadratic unconstrained binary optimisation (QUBO) problem. By setting 
+
+    %We can reformulate the Ising spin model in terms of binary variables by setting
+    %\begin{equation}
+    %    x_i = \frac{1+\sigma_i}{2},
+    %\end{equation}
+    %where $x_i$ is a binary variable and $\sigma_i$ a spin variable. Setting $\sigma_i = -1$ yields $x_i = 0$ and $\sigma_i=1$ gives $x_i = 1$.
+    
+    %there exists a polynomial-time mapping to any other NP-complete problem.
+
+
