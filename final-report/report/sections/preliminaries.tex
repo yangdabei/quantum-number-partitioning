@@ -11,7 +11,7 @@
         
     \end{itemize}
 
-    Although a candidate solution to an NP-complete problem can be verified in polynomial time, a solution cannot be found in polynomial time with a deterministic algorithm. That is, the most comprehensive method to obtain all solution using any currently known algorithm is by performing a brute force search which increases as the size of the problem grows. The P versus NP problem wishes to determine if these problems can be solved quickly. Whilst methods to compute solutions to NP-complete problems in polynomial time are yet to be discovered, heuristic methods and approximation algorithms are typically used to find optimal solutions.
+    Although a candidate solution to an NP-complete problem can be verified in polynomial time, a solution cannot be found in polynomial time with a deterministic algorithm. That is, the most comprehensive method to obtain all solution using any currently known algorithm is by performing a brute force search on a space that increases exponentially with the size of the problem. The P versus NP problem wishes to determine if these problems can be solved quickly. Whilst methods to compute solutions to NP-complete problems in polynomial time are yet to be discovered, heuristic methods and approximation algorithms are typically used to find optimal, or near-optimal, solutions.
 
 
 
@@ -25,7 +25,7 @@
 
     Whilst classical information is encoded in bits, we express quantum information in quantum bits, often referred to as qubits \cite{schumacher1995quantum}. A single qubit can be thought of as a two-state system, such as a spin-half or a two-level atom. We represent the quantum state of a qubit by the vectors 
     $$|0\rangle=\begin{pmatrix}1\\0\end{pmatrix} \quad \text{ and } \quad |1\rangle = \begin{pmatrix}0\\1\end{pmatrix},$$
-    which we call its computational basis. More generally, a quantum system has $n$ qubits if it can be represented as a superposition of orthonormal basis elements within a Hilbert space of dimension $2^n$. The $2^n$ orthonormal basis elements is typically represented by $\{|\mathbf{x}\rangle\}$, where $\mathbf{x}$ is a bitstring of length $n$. For multi-state quantum systems, a bitstring of length $n$ corresponds to the Kronecker product of the vectors represented by each bit, that is, we represent a general quantum state as
+    which we call its computational basis. More generally, a quantum system has $n$ qubits if it can be represented as a superposition of orthonormal basis elements within a Hilbert space of dimension $2^n$. The $2^n$ orthonormal basis elements are typically represented by $\{|\mathbf{x}\rangle\}$, where $\mathbf{x}$ is a bitstring of length $n$. For multi-state quantum systems, a bitstring of length $n$ corresponds to the Kronecker product of the vectors representing each bit, that is, we represent a general, pure quantum state as
     \begin{align}
         |\psi\rangle &= \sum^{2^n}_{k=1}a_k|x_1\rangle \otimes\dots\otimes|x_n\rangle \nonumber \\
         &= \sum^{2^n}_{k=1}a_k|x_1\dots x_n\rangle,
@@ -35,15 +35,15 @@
 
 \subsection{Ising Models}
 
-    The Ising model is a mathematical model that describes phase transitions. The atoms in a crystal are represented by vertices and bonds between adjacent atoms are represented by edges. The mapping is such that a solution to the problem corresponds to a spin configuration that minimizes the energy of the Ising spin glass model. Classically, an Ising model can be represented as a quadratic function of a set of $n$ spin states $s_i=\pm1$ given by the Hamiltonian 
+    The Ising model is a mathematical model that describes phase transitions. The atoms in a crystal are represented by vertices and bonds between adjacent atoms are represented by edges. The mapping is such that a solution to the problem corresponds to a spin configuration that minimises the energy of the Ising spin glass system. Classically, an Ising model can be represented as a quadratic function of a set of $n$ spin states $s_u\in\{\pm1\}$ given by the Hamiltonian 
     \begin{equation} \label{eq:ising}
-        H(s_1,\dots,s_n) = -\sum_{i<j}J_{ij}s_is_j-\sum^n_{i=1}h_is_i,
+        H(s_1,\dots,s_n) = -\sum_{u<v}J_{uv}s_us_v-\sum^n_{i=1}h_us_u,
     \end{equation}
-    where $J$ is a real, symmetric matrix with zero diagonal often referred to as the coupling matrix, and $h$ is a vector of real coefficients often referred to as the local magnetic field. The quantum version of the Ising model simply maps each spin variable $s_i$ to the Pauli-$Z$ matrix $\sigma_i^z$ which acts on the $i$-th qubit in a Hilbert space of $n$ qubits. Equation \ref{eq:ising} can then be expressed as an operator given by $H\in \mathbb{R}^{2^n}\times \mathbb{R}^{2^n}$, where
+    where $J$ is a real, symmetric matrix with zero diagonal often referred to as the coupling matrix, and $h$ is a vector of real coefficients often referred to as the local magnetic field. The quantum version of the Ising model simply maps each spin variable $s_u$ to the Pauli-$Z$ matrix $\sigma_u^z$ which acts on the $u$-th qubit in a Hilbert space of $n$ qubits. \eqref{eq:ising} can then be expressed as an operator given by $H\in \mathbb{C}^{2^n}\times \mathbb{C}^{2^n}$, where
     \begin{equation} \label{eq:ising_quantum}
-        H(\sigma^z_1,\dots,\sigma^z_n) = -\sum_{i<j}J_{ij}\sigma^z_i\sigma^z_j-\sum^n_{i=1}h_i\sigma^z_i.
+        H(\sigma^z_1,\dots,\sigma^z_n) = -\sum_{u<v}J_{uv}\sigma^z_u\sigma^z_v-\sum^n_{u=1}h_u\sigma^z_u.
     \end{equation}
-    Since the decision form of the Ising model determining whether $H_0\leq 0$ is NP-complete \cite{barahona1982computational} (where $H_0$ is the ground state of the Hamiltonian), we can map any NP-complete problem in polynomial time to solving for the ground state of an Ising spin model \cite{lucas2014ising}. We will use the quantum Ising formulation approach \cite{kirkpatrick1983optimization} to find the ground states of combinatorial optimisation problems that we introduce next.
+    Since the decision form of the Ising model determining whether $H_0\leq 0$ is NP-complete \cite{barahona1982computational} (where $H_0$ is the ground state energy of the Hamiltonian), we can map any NP-complete problem in polynomial time to solving for the ground state of an Ising spin model \cite{lucas2014ising}. We will use the quantum Ising formulation approach \cite{kirkpatrick1983optimization} to find the optimal solutions of combinatorial optimisation problems that we introduce next.
 
     %It is sometimes preferable to express the Hamiltonian in the form of a matrix. An alternate formulation of the Ising glass model is to represent the problem as a quadratic unconstrained binary optimisation (QUBO) problem. By setting 
 

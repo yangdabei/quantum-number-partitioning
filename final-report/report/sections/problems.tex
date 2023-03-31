@@ -3,23 +3,23 @@
     \subsection{Maximum Cut (Max-Cut)}
         The maximum cut (max-cut) problem is a decision problem known to be NP-complete \cite{karp2010reducibility}. Given an undirected graph and an integer $k$, the cut problem determines whether there is a partition of the nodes into two complementary subsets such that the number of edges between the two subsets is at least $k$. A \emph{maximum cut} is a cut that is as large as any cut for that graph. Figure \ref{fig:maxcut} shows a maximum cut for an example graph.
 
-        The optimisation version of this problem is NP-hard which aims to maximise the sum of the weights of the edges in the cut. Let $G=(V,E)$ be a weighted, undirected $n$-graph with edge weights $w_{ij}>0$, $w_{ij}=w_{ji}$ for all $(i,j)\in E$. For each node $i$, we assign $x_i=\pm1$ to separate the nodes into the two complementary subsets. The max-cut problem can then be formulated as a binary quadratic program of the form 
+        The optimisation version of this problem is NP-hard which aims to maximise the sum of the weights of the edges in the cut. Let $G=(V,E)$ be a weighted, undirected $n$-graph with edge weights $w_{uv}>0$, $w_{uv}=w_{vu}$ for all $(u,v)\in E$. For each node $u$, we assign $x_u=\pm1$ to separate the nodes into the two complementary subsets. The max-cut problem can then be formulated as a binary quadratic program of the form 
         \begin{align}
         \begin{split}
-            &\text{maximise} \quad  C_{MC}=\frac{1}{2}\sum_{(i,j)\in E}w_{ij}(1-x_ix_j) \\
-            &\text{subject to} \quad\quad x_i\in\{-1,1\}\quad\forall i\in V.
+            &\text{maximise} \quad  C_{MC}=\frac{1}{2}\sum_{(u,v)\in E}w_{uv}(1-x_ux_v) \\
+            &\text{subject to} \quad\quad x_u\in\{-1,1\}\quad\forall u\in V.
         \end{split}
         \end{align}
-        Equivalently, we can formulate the max-cut problem as an Ising spin glass model  through the trivial mapping $x_i\mapsto s_i$, where $s_i\in\{-1,1\}$. We then obtain the Ising energy function for the max-cut problem given by
+        Equivalently, we can formulate the max-cut problem as an Ising spin glass model  through the trivial mapping $x_u\mapsto s_u$, where $s_u\in\{-1,1\}$. We then obtain the Ising energy function for the max-cut problem given by
         \begin{align}
             \begin{split}
-                H(s_1,\dots,s_n) &= \frac{1}{2}\sum_{(i,j)\in E} w_{ij}(1-s_is_j) \\
-                &=\sum_{i<j}\frac{w_{ij}}{2} - \sum_{i<j}\frac{w_{ij}}{2}s_is_j.
+                H(s_1,\dots,s_n) &= \frac{1}{2}\sum_{(u,v)\in E} w_{uv}(1-s_us_v) \\
+                &=\sum_{u<v}\frac{w_{uv}}{2} - \sum_{u<v}\frac{w_{uv}}{2}s_us_v.
             \end{split}
         \end{align}
-        Setting $J_{ij}:= w_{ij}/2$ gives an Ising energy function that satisfies Equation \ref{eq:ising} up to a constant. Finally, promoting the spin variables to Pauli-$Z$ spin matrices $s_i\mapsto\sigma_i^z$ gives a cost Hamiltonian $H_{MC}$ in the form of Equation \ref{eq:ising_quantum}, which returns
+        Setting $J_{uv}:= w_{uv}/2$ gives an Ising energy function that satisfies \eqref{eq:ising} up to a constant. Finally, promoting the spin variables to Pauli-$Z$ spin matrices $s_u\mapsto\sigma_u^z$ gives a cost Hamiltonian $H_{MC}$ in the form of \eqref{eq:ising_quantum}, which returns
         \begin{equation}
-            H_{MC} = -\sum_{i<j}\frac{w_{ij}}{2}\sigma^z_i\sigma^z_j+\sum_{i<j}\frac{w_{ij}}{2}.
+            H_{MC} = -\sum_{u<v}\frac{w_{uv}}{2}\sigma^z_u\sigma^z_v+\sum_{u<v}\frac{w_{uv}}{2}.
         \end{equation}
 
         \begin{figure}[H]
@@ -53,13 +53,13 @@
 
     \subsection{Number Partitioning (NPP)}
 
-        The number partitioning problem (NPP) is another well-known NP-complete problem \cite{karp2010reducibility}. Given a set of integers, the problem is to determine whether there exists a partition of the input set into two subsets, such that the difference between the sums of the two subsets are equal.
+        The NPP is another well-known NP-complete problem \cite{karp2010reducibility}. Given a set of integers, the problem is to determine whether there exists a partition of the input set into two subsets, such that the difference between the sums of the two subsets is 0 or 1.
 
-        The optimisation version of this problem is NP-hard which aims to minimise the difference in the sums of the two partitions. A solution is called a perfect partition if the difference is 0 or 1 if the sum of the entire set is even or odd respectively. Let $S=\{n_1,\dots,n_N\}$ be a set of $n$-positive integers. Then, the number partitioning problem becomes
+        The optimisation version of this problem is NP-hard which aims to minimise the difference in the sums of the two partitions. A solution is called a perfect partition if the difference is 0 or 1 if the sum of the entire set is even or odd respectively. Let $S=\{n_1,\dots,n_N\}$ be a set of $n$-positive integers. Then, the NPP becomes
         \begin{align}
         \begin{split}
                 &\text{minimise} \quad  C_{NPP}=\lr(){\sum_{i=1}^Nn_ix_i}^2 \\
-                &\text{subject to} \quad x_i\in\{-1,1\}\quad\forall i\in V.
+                &\text{subject to} \quad x_i\in\{-1,1\}\quad\forall i\in\{1,\dots,N\}.
         \end{split}
         \end{align}
         Again, we can equivalently formulate NPP as an Ising spin glass model by the trivial mapping $x_i\mapsto s_i$, where $s_i\in\{-1,1\}$. We obtain the Ising energy function for NPP given by 
@@ -69,7 +69,7 @@
                 &= 2\sum^N_{i<j} n_in_js_is_j + \sum^N_{i=1}n_i^2.
             \end{split}
         \end{align}
-        Setting $J_{ij}:=-2n_in_j$ gives and Ising energy function that satisfies Equation \ref{eq:ising} up to a constant. Again, promotion of the spin variables to Pauli-$Z$ spin matrices gives a cost Hamiltonian $H_{NPP}$ in the form of Equation \ref{eq:ising_quantum}, which gives
+        Setting $J_{ij}:=-2n_in_j$ gives an Ising energy function that satisfies Equation \ref{eq:ising} up to a constant. Again, promotion of the spin variables to Pauli-$Z$ spin matrices gives a cost Hamiltonian $H_{NPP}$ in the form of Equation \ref{eq:ising_quantum}, which gives
         \begin{equation}
             H_{NPP} = 2\sum^N_{i<j} n_in_j\sigma^z_i\sigma^z_j + \sum^N_{i=1}n_i^2.
         \end{equation}

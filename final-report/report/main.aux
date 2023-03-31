@@ -18,6 +18,9 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{Preskill2018quantumcomputingin}
 \citation{boixo2018characterizing}
+\citation{mcardle2020quantum}
+\citation{orus2019quantum}
+\citation{dunjko2016quantum}
 \citation{cerezo2021variational}
 \citation{farhi2014quantum}
 \citation{streif2021beating}
@@ -39,8 +42,6 @@
 \citation{kirkpatrick1983optimization}
 \citation{karp2010reducibility}
 \citation{karp2010reducibility}
-\citation{korf2009multi}
-\citation{hayes2002computing}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Ising Models}{2}{section*.5}\protected@file@percent }
 \newlabel{eq:ising}{{3}{2}{}{equation.2.3}{}}
 \newlabel{eq:ising_quantum}{{4}{2}{}{equation.2.4}{}}
@@ -51,26 +52,28 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:maxcut}{{1}{2}{Unweighted graph with max-cut of 5. The cut can be represented by the disjoint sets $S_1=\{0,3,4,5\}$ and $S_2=\{1,2\}$, which corresponds to a bitstring encoding of $\mathbf {x}=100111$ or $\mathbf {x}=011000$.\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}Number Partitioning (NPP)}{2}{section*.9}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Quantum Approximate Optimisation Algorithm (QAOA)}{3}{section*.10}\protected@file@percent }
+\citation{korf2009multi}
+\citation{hayes2002computing}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Quantum Approximate Optimisation Algorithm}{3}{section*.10}\protected@file@percent }
 \newlabel{sec:qaoa}{{IV}{3}{}{section*.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The set $S=\{1,2,3,4\}$ can be partitioned into subsets $S_1=\{1,4\}$ and $S_2=\{2,3\}$. When the partition problem is transformed into a complete graph, this partition corresponds to the maximum cut of $12+3+2+8= 25$.\relax }}{3}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:number_maxcut}{{2}{3}{The set $S=\{1,2,3,4\}$ can be partitioned into subsets $S_1=\{1,4\}$ and $S_2=\{2,3\}$. When the partition problem is transformed into a complete graph, this partition corresponds to the maximum cut of $12+3+2+8= 25$.\relax }{figure.caption.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {A}Applying QAOA to Number Partitioning}{3}{section*.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The set $S=\{1,2,3,4\}$ can be partitioned into subsets $S_1=\{1,4\}$ (denoted by the vertices coloured blue) and $S_2=\{2,3\}$. When the partition problem is transformed into a complete graph, this partition corresponds to the maximum cut of $12+3+2+8= 25$.\relax }}{3}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:number_maxcut}{{2}{3}{The set $S=\{1,2,3,4\}$ can be partitioned into subsets $S_1=\{1,4\}$ (denoted by the vertices coloured blue) and $S_2=\{2,3\}$. When the partition problem is transformed into a complete graph, this partition corresponds to the maximum cut of $12+3+2+8= 25$.\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A}Applying QAOA to NPP}{3}{section*.11}\protected@file@percent }
 \newlabel{eq:cost}{{20}{3}{}{equation.4.20}{}}
-\newlabel{thm:qaoa}{{1}{3}{}{theorem.1}{}}
 \citation{vijendran2023expressive}
 \citation{herrman2022multi}
 \citation{herrman2022multi}
 \citation{vijendran2023expressive}
-\@writefile{toc}{\contentsline {subsection}{\numberline {B}Multi-Angle QAOA (MAQAOA)}{4}{section*.13}\protected@file@percent }
+\newlabel{thm:qaoa}{{1}{4}{}{theorem.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B}Multi-Angle QAOA}{4}{section*.13}\protected@file@percent }
 \newlabel{thm:maqaoa}{{2}{4}{}{theorem.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}eXpressive QAOA (XQAOA)}{4}{section*.14}\protected@file@percent }
-\newlabel{thm:xqaoa}{{3}{4}{}{theorem.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}eXpressive QAOA}{4}{section*.14}\protected@file@percent }
 \citation{vijendran2023expressive}
 \citation{goemans1994879}
 \citation{korf2009multi}
 \citation{gurobi}
 \citation{vijendran2023expressive}
+\newlabel{thm:xqaoa}{{3}{5}{}{theorem.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {V}Simulations}{5}{section*.15}\protected@file@percent }
 \newlabel{sec:sim}{{V}{5}{}{section*.15}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A}Methods}{5}{section*.16}\protected@file@percent }
@@ -95,25 +98,24 @@
 \bibdata{bibliography}
 \bibcite{Preskill2018quantumcomputingin}{{1}{2018}{{Preskill}}{{}}}
 \bibcite{boixo2018characterizing}{{2}{2018}{{Boixo et~al.}}{{Boixo, Isakov, Smelyanskiy, Babbush, Ding, Jiang, Bremner, Martinis, and Neven}}}
-\bibcite{cerezo2021variational}{{3}{2021{}}{{Cerezo et~al.}}{{Cerezo, Arrasmith, Babbush, Benjamin, Endo, Fujii, McClean, Mitarai, Yuan, Cincio, et~al.}}}
-\bibcite{farhi2014quantum}{{4}{2014}{{Farhi et~al.}}{{Farhi, Goldstone, and Gutmann}}}
-\bibcite{streif2021beating}{{5}{2021}{{Streif et~al.}}{{Streif, Yarkoni, Skolik, Neukart, and Leib}}}
-\bibcite{vikstaal2020applying}{{6}{2020}{{Vikst{\r a}l et~al.}}{{Vikst{\r a}l, Gr{\"o}nkvist, Svensson, Andersson, Johansson, and Ferrini}}}
-\bibcite{sarkar1987partitioning}{{7}{1987}{{Sarkar}}{{}}}
-\bibcite{walsh2009really}{{8}{2009}{{Walsh}}{{}}}
-\bibcite{merkle1978hiding}{{9}{1978}{{Merkle and Hellman}}{{}}}
-\bibcite{herrman2022multi}{{10}{2022}{{Herrman et~al.}}{{Herrman, Lotshaw, Ostrowski, Humble, and Siopsis}}}
-\bibcite{vijendran2023expressive}{{11}{2023}{{Vijendran et~al.}}{{Vijendran, Das, Koh, Assad, and Lam}}}
-\bibcite{schumacher1995quantum}{{12}{1995}{{Schumacher}}{{}}}
-\bibcite{barahona1982computational}{{13}{1982}{{Barahona}}{{}}}
-\bibcite{lucas2014ising}{{14}{2014}{{Lucas}}{{}}}
-\bibcite{kirkpatrick1983optimization}{{15}{1983}{{Kirkpatrick et~al.}}{{Kirkpatrick, Gelatt~Jr, and Vecchi}}}
-\bibcite{karp2010reducibility}{{16}{2010}{{Karp}}{{}}}
-\bibcite{korf2009multi}{{17}{2009}{{Korf}}{{}}}
-\bibcite{hayes2002computing}{{18}{2002}{{Hayes}}{{}}}
-\bibcite{goemans1994879}{{19}{1994}{{Goemans and Williamson}}{{}}}
-\bibcite{gurobi}{{20}{2023}{{Gurobi Optimization, LLC}}{{}}}
-\bibcite{mcclean2018barren}{{21}{2018}{{McClean et~al.}}{{McClean, Boixo, Smelyanskiy, Babbush, and Neven}}}
+\bibcite{mcardle2020quantum}{{3}{2020}{{McArdle et~al.}}{{McArdle, Endo, Aspuru-Guzik, Benjamin, and Yuan}}}
+\bibcite{orus2019quantum}{{4}{2019}{{Or{\'u}s et~al.}}{{Or{\'u}s, Mugel, and Lizaso}}}
+\bibcite{dunjko2016quantum}{{5}{2016}{{Dunjko et~al.}}{{Dunjko, Taylor, and Briegel}}}
+\bibcite{cerezo2021variational}{{6}{2021{}}{{Cerezo et~al.}}{{Cerezo, Arrasmith, Babbush, Benjamin, Endo, Fujii, McClean, Mitarai, Yuan, Cincio, et~al.}}}
+\bibcite{farhi2014quantum}{{7}{2014}{{Farhi et~al.}}{{Farhi, Goldstone, and Gutmann}}}
+\bibcite{streif2021beating}{{8}{2021}{{Streif et~al.}}{{Streif, Yarkoni, Skolik, Neukart, and Leib}}}
+\bibcite{vikstaal2020applying}{{9}{2020}{{Vikst{\r a}l et~al.}}{{Vikst{\r a}l, Gr{\"o}nkvist, Svensson, Andersson, Johansson, and Ferrini}}}
+\bibcite{sarkar1987partitioning}{{10}{1987}{{Sarkar}}{{}}}
+\bibcite{walsh2009really}{{11}{2009}{{Walsh}}{{}}}
+\bibcite{merkle1978hiding}{{12}{1978}{{Merkle and Hellman}}{{}}}
+\bibcite{herrman2022multi}{{13}{2022}{{Herrman et~al.}}{{Herrman, Lotshaw, Ostrowski, Humble, and Siopsis}}}
+\bibcite{vijendran2023expressive}{{14}{2023}{{Vijendran et~al.}}{{Vijendran, Das, Koh, Assad, and Lam}}}
+\bibcite{schumacher1995quantum}{{15}{1995}{{Schumacher}}{{}}}
+\bibcite{barahona1982computational}{{16}{1982}{{Barahona}}{{}}}
+\bibcite{lucas2014ising}{{17}{2014}{{Lucas}}{{}}}
+\bibcite{kirkpatrick1983optimization}{{18}{1983}{{Kirkpatrick et~al.}}{{Kirkpatrick, Gelatt~Jr, and Vecchi}}}
+\bibcite{karp2010reducibility}{{19}{2010}{{Karp}}{{}}}
+\bibcite{korf2009multi}{{20}{2009}{{Korf}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Box plots for problem instances with fixed $m=8$ on a linear scale.\relax }}{7}{figure.caption.21}\protected@file@percent }
 \newlabel{fig:fixed_m_normal}{{4}{7}{Box plots for problem instances with fixed $m=8$ on a linear scale.\relax }{figure.caption.21}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B}Phase Transition}{7}{section*.22}\protected@file@percent }
@@ -121,12 +123,16 @@
 \newlabel{sec:fd}{{VII}{7}{}{section*.23}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}Acknowledgements}{7}{section*.24}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{7}{section*.25}\protected@file@percent }
-\bibcite{mertens1998phase}{{22}{1998}{{Mertens}}{{}}}
-\bibcite{cerezo2021cost}{{23}{2021{}}{{Cerezo et~al.}}{{Cerezo, Sone, Volkoff, Cincio, and Coles}}}
-\bibcite{bengtsson2019quantum}{{24}{2019}{{Bengtsson et~al.}}{{Bengtsson, Vikst{\r a}l, Warren, Svensson, Gu, Kockum, Krantz, Krizan, Shiri, Svensson, et~al.}}}
-\bibcite{zhou2020quantum}{{25}{2020}{{Zhou et~al.}}{{Zhou, Wang, Choi, Pichler, and Lukin}}}
-\global \chardef \firstnote@num25\relax 
+\bibcite{hayes2002computing}{{21}{2002}{{Hayes}}{{}}}
+\bibcite{goemans1994879}{{22}{1994}{{Goemans and Williamson}}{{}}}
+\bibcite{gurobi}{{23}{2023}{{Gurobi Optimization, LLC}}{{}}}
+\bibcite{mcclean2018barren}{{24}{2018}{{McClean et~al.}}{{McClean, Boixo, Smelyanskiy, Babbush, and Neven}}}
+\bibcite{mertens1998phase}{{25}{1998}{{Mertens}}{{}}}
+\bibcite{cerezo2021cost}{{26}{2021{}}{{Cerezo et~al.}}{{Cerezo, Sone, Volkoff, Cincio, and Coles}}}
+\bibcite{bengtsson2019quantum}{{27}{2019}{{Bengtsson et~al.}}{{Bengtsson, Vikst{\r a}l, Warren, Svensson, Gu, Kockum, Krantz, Krizan, Shiri, Svensson, et~al.}}}
+\bibcite{zhou2020quantum}{{28}{2020}{{Zhou et~al.}}{{Zhou, Wang, Choi, Pichler, and Lukin}}}
+\global \chardef \firstnote@num28\relax 
 \bibstyle{unsrtnat}
-\newlabel{LastBibItem}{{25}{8}{}{section*.25}{}}
+\newlabel{LastBibItem}{{28}{8}{}{section*.25}{}}
 \newlabel{LastPage}{{}{9}{}{page.9}{}}
 \gdef \@abspage@last{8}

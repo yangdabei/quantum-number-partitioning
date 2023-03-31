@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -19,6 +19,25 @@ Sergio Boixo, Sergei~V Isakov, Vadim~N Smelyanskiy, Ryan Babbush, Nan Ding,
   Zhang Jiang, Michael~J Bremner, John~M Martinis, and Hartmut Neven.
 \newblock Characterizing quantum supremacy in near-term devices.
 \newblock \emph{Nature Physics}, 14\penalty0 (6):\penalty0 595--600, 2018.
+
+\bibitem[McArdle et~al.(2020)McArdle, Endo, Aspuru-Guzik, Benjamin, and
+  Yuan]{mcardle2020quantum}
+Sam McArdle, Suguru Endo, Al{\'a}n Aspuru-Guzik, Simon~C Benjamin, and Xiao
+  Yuan.
+\newblock Quantum computational chemistry.
+\newblock \emph{Reviews of Modern Physics}, 92\penalty0 (1):\penalty0 015003,
+  2020.
+
+\bibitem[Or{\'u}s et~al.(2019)Or{\'u}s, Mugel, and Lizaso]{orus2019quantum}
+Rom{\'a}n Or{\'u}s, Samuel Mugel, and Enrique Lizaso.
+\newblock Quantum computing for finance: Overview and prospects.
+\newblock \emph{Reviews in Physics}, 4:\penalty0 100028, 2019.
+
+\bibitem[Dunjko et~al.(2016)Dunjko, Taylor, and Briegel]{dunjko2016quantum}
+Vedran Dunjko, Jacob~M Taylor, and Hans~J Briegel.
+\newblock Quantum-enhanced machine learning.
+\newblock \emph{Physical review letters}, 117\penalty0 (13):\penalty0 130501,
+  2016.
 
 \bibitem[Cerezo et~al.(2021{\natexlab{a}})Cerezo, Arrasmith, Babbush, Benjamin,
   Endo, Fujii, McClean, Mitarai, Yuan, Cincio, et~al.]{cerezo2021variational}
